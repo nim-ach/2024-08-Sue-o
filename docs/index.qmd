@@ -1,0 +1,198 @@
+---
+title: "Análisis Estadístico"
+author: "Matías Castillo-Aguilar"
+format: html
+editor: visual
+code-fold: true
+fig-width: 8
+fig-height: 4
+fig-format: svg
+execute: 
+  warning: false
+lang: "es"
+toc: true
+---
+
+```{r}
+#| include: false
+## Cargar librerias
+load(file = "../data/sleep.RData")
+
+## Cargar funciones
+library(data.table)
+library(ggplot2)
+library(sjPlot)
+library(gtsummary)
+
+## Estilo predeterminado de los gráficos
+theme_set(new = theme_classic())
+
+## Preparamos los datos
+sleep <- as.data.table(sleep)
+```
+
+## Metodología
+
+Los análisis fueron realizados usando el lenguaje de programación estadística R (versión 4.4.1). Se implementaron estadísticos descriptivos, comparativos y correlacionales paramétricos sobre el conjunto de datos evaluados, posterior a la evaluación analítica y gráfica de las propiedades distribucionales de la muestra analizada, considerando del mismo modo el tamaño muestral final de 220 individuos.
+
+:::{.column-page-inset-left}
+```{r}
+DT::datatable(sleep)
+```
+:::
+
+
+## Descripción de la muestra
+
+Los datos analizados consisten en 220 individuos, de los cuales 129 (58.6%) son de la región de Magallanes y Antártica Chilena y 91 (41.4%) de la región Metropolitana.
+
+De estos individuos, al evaluar los resultados de los instrumentos específicos, observamos en el índice de calidad de sueño de Pittsburgh que 149 (67.7%) sujetos presentan un mal dormir, entendido como un puntaje global mayor a 5, con un puntaje mayor indicando peor calidad de sueño. Por otro lado, solo 60 (27.3%) personas presentaron un buen dormir bajo los estándares del instrumento evaluado.
+
+```{r}
+
+plot_frq(sleep, psqi_cat, show.na = T) +
+  labs(x = NULL)
+```
+
+En relación al puntaje de matutinidad, observamos puntajes que oscilaron entre los 4 a los 24 puntos, con una mediana y media en 14 y 14.1 puntos respectivamente, con el 50% de la muestra entre los 12 a los 16 puntos.
+
+```{r}
+ggplot(sleep, aes(ho_score)) +
+  stat_density(outline.type = "full", fill = "#34689C") +
+  geom_histogram(mapping = aes(y = after_stat(density) / 2), 
+                 binwidth = 1, fill = "white", col = "#34689C") +
+  geom_vline(xintercept = mean(sleep$ho_score, na.rm = TRUE), 
+             linetype = 1, col = "darkorange") +
+  annotate(geom = "text", x = 15.25, y = 0.125, label = "Media") +
+  scale_y_continuous(expand = c(0,0,0,0.01)) +
+  labs(y = "Densidad", x = "Puntaje de Matutinidad")
+```
+
+En el caso del cuestionario de cronotipo de Munich, observamos que las horas de sueños de los participantes en los días de semana osciló entre los 49 minutos a las 14 horas de sueño, con el 50% de los participantes durmiendo entre 6 a 7.9 horas, con 6.9 horas de media. Por otor lado, durante el fin de semana las horas de sueño oscilaron entre 30 minutos y 16 horas, con el 50% de los participantes durmiendo entre 8 a 10.5 horas, con 9.3 horas de media durante el fin de semana. Al evaluar la diferencia de horas de sueño entre el dia de semana y el fin de semana, observamos que el 50% de los participantes duerme entre 1 a 3.5 horas más el fin de semana, con una media de 2.35 horas más de sueño comparado con los días de semana.
+
+```{r}
+
+melt(data = sleep, 
+     id.vars = "id", 
+     measure.vars = c("munich_horas_semana", 
+                      "munich_horas_finde", 
+                      "munich_horas_diff")) |> 
+  ggplot(aes(value, variable)) +
+  geom_vline(xintercept = seq(-7.5, 15, by = 5), alpha = .1, lwd = 0.5) +
+  geom_vline(xintercept = seq(-7.5, 15, by = 2.5), alpha = .05, lwd = 0.5) +
+  tidybayes::stat_halfeye(aes(fill = after_stat(x > 0)), show.legend = FALSE, density = "unbounded") +
+  scale_y_discrete(name = NULL,
+                   labels = c("Día de la semana", 
+                              "Fin de semana",
+                              "Diferencia"),
+                   expand = c(0,0.1)) +
+  labs(x = "Horas de sueño") +
+  scale_x_continuous(n.breaks = 10) +
+  scale_fill_brewer(type = "qual", palette = 7, direction = -1) +
+  annotate(geom = "text", x = -.2, y = 2.9, label = "Peor sueño el fin de semana", 
+           hjust = 1, col = "darkred") +
+  annotate(geom = "text", x = .2, y = 2.9, label = "Mejor sueño el fin de semana", 
+           hjust = 0, col = "darkgreen")
+```
+
+En relación a los resultados obtenidos del cuestionario de perfil estacional infanto-juvenil, observamos que los punatajes oscilaron entre los 0 a los 37 puntos, el 50% de la muestra puntuó entre 10 a 22 puntos y la puntuación media fue de 16.1 puntos. De la muestra evaluada, observamos que 116 (52.7%) participantes calificaron la estacionalidad y sus efectos como un problema, mientras que 88 (40%) participantes no lo percibieron como tal. Finalmente, observamos que solo 40 (18.2%) individuos del total de la muestra evaluada cumplen con los criterios del instrumento para desorden afectivo estacional (SAD), mientras que 180 (81.8%) participantes estarían catalogados con un puntaje típico.
+
+```{r}
+
+#| fig-height: 8
+a <- ggpubr::ggarrange(plotlist = plot_frq(sleep, spaq_problema_cat, spaq_sad_cat, show.na = TRUE, axis.title = c("")), widths = c(3,2))
+
+b <- ggplot(sleep, aes(spaq_gss)) +
+  stat_density(outline.type = "full", fill = "#34689C", ) +
+  geom_histogram(mapping = aes(y = after_stat(density) / 2), 
+                 binwidth = 2, fill = "white", col = "#34689C") +
+  geom_vline(xintercept = mean(sleep$spaq_gss, na.rm = TRUE), 
+             linetype = 1, col = "darkorange") +
+  annotate(geom = "text", x = 15.25, y = 0.05, label = "Media") +
+  scale_y_continuous(expand = c(0,0,0,0.01)) +
+  labs(y = NULL, x = "Índice de estacionalidad global (GSS)")
+
+ggpubr::ggarrange(a, b, nrow = 2, ncol = 1)
+```
+
+## Comparación por Regiones
+
+Al comparar los diferentes índices relacionados con el sueño entre regiones, observamos una diferencia estadísticamente significativa en el puntaje total de la escala de cronotipo, en donde la región de Magallanes puntuó 1.23 puntos menos que la región metropolitana (CI\~95%\~\[-2.22, -0.25\], p = 0.015).
+
+```{r}
+t.test(ho_score ~ comuna, sleep, var.equal = F) # *
+
+ggplot(sleep, aes(ho_score, comuna)) +
+  ggdist::stat_halfeye(density = "unbounded", trim = FALSE, fill = "#34689C",
+                       point_interval = ggdist::mean_qi) +
+  labs(x = "Puntaje de cronotipo", y = NULL)
+```
+
+Al comparar si las horas dormidas los días de la semana eran diferentes entre regiones, no observamos diferencias significativas.
+
+```{r}
+t.test(munich_horas_semana ~ comuna, sleep, var.equal = FALSE) # ns
+ggplot(sleep, aes(munich_horas_semana, comuna)) +
+  ggdist::stat_halfeye(density = "unbounded", trim = FALSE, 
+                       fill = "#34689C", point_interval = ggdist::mean_qi) +
+  labs(x = "Horas dormidas en la semana", y = NULL)
+```
+
+La cantidad de horas dormidas los fin de semana tampoco mostraron diferencias significativas entre regiones.
+
+```{r}
+t.test(munich_horas_finde ~ comuna, sleep, var.equal = FALSE) # ns
+ggplot(sleep, aes(munich_horas_finde, comuna)) +
+  ggdist::stat_halfeye(density = "unbounded", trim = FALSE, fill = "#34689C",
+                       point_interval = ggdist::mean_qi) +
+  labs(x = "Horas dormidas el fin de semana", y = NULL)
+```
+
+Tampoco se observaron diferencias entre la difrencia de horas dormidas el fin de semana vs los días de la semana al comparar entre regiones.
+
+```{r}
+t.test(munich_horas_diff ~ comuna, sleep, var.equal = FALSE) # ns
+ggplot(sleep, aes(munich_horas_diff, comuna)) +
+  ggdist::stat_halfeye(density = "unbounded", trim = FALSE, fill = "#34689C",
+                       point_interval = ggdist::mean_qi) +
+  labs(x = "Diferencia de horas dormidas en fin de\nsemana vs día de la semana",
+       y = NULL)
+```
+
+Finalmente, y al comparar entre regiones los puntajes obtenidos en el índice de estacionalidad global, tampoco observamos diferencias singificativas.
+
+```{r}
+t.test(spaq_gss ~ comuna, sleep, var.equal = FALSE) # ns
+ggplot(sleep, aes(spaq_gss, comuna)) +
+  ggdist::stat_halfeye(density = "unbounded", trim = FALSE, fill = "#34689C",
+                       point_interval = ggdist::mean_qi) +
+  labs(x = "Índice de estacionalidad global (GSS)", y = NULL)
+```
+
+En relación a la sensibilidad estacional, no se observó una asociación significativa entre el estado de severidad autopercibida de la sensibilidad estacional.
+
+```{r}
+with(sleep, table(comuna, spaq_problema_cat)) |> chisq.test()
+```
+
+Un efecto similar pudo observarse en relación al criterio de SAD entre comunas, en donde se destacó una falta de evidencia a favor de una asociación.
+
+```{r}
+with(sleep, table(comuna, spaq_sad_cat)) |> chisq.test()
+```
+
+Sin embargo, al examinar la categoría de calidad de sueño del índice de Pittsburgh, observamos una asociación entre la región y el mal dormir, lo que pareciera sugerir que las personas de la región de Magallanes experimentan un mal dormir en mayor proporción que aquellas personas de la región Metropolitana.
+
+```{r}
+with(sleep, table(comuna, psqi_cat)) |> chisq.test()
+plot_xtab(sleep$comuna, sleep$psqi_cat, bar.pos = "stack", margin = "row")
+```
+
+## Correlaciones
+
+En términos de correlaciones, observamos una correlación significativa entre el puntaje de cronotipo y las horas dormidas durante la semana (r = 0.29, p < 0.001), pero no las horas dormidas durante el fin de semana (r = 0.08, p = 0.230). Otras correlaciones se observan entre las horas dormidas el fin de semana, los días de semana y la diferencia entre estos.
+
+```{r}
+correlation::correlation(sleep, p_adjust = "none", method = "pearson")
+```
+
