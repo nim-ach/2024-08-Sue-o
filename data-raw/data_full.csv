@@ -1,0 +1,221 @@
+comuna,id,psqi_cat,ho_score,munich_horas_semana,munich_horas_finde,munich_horas_diff,munich_msfc,munich_mswc,munich_sjlc,spaq_gss,spaq_problema_cat,spaq_sad_cat
+Punta Arenas,1,Mal dormir,15,8,9,1,6.5,2,4.5,3,No es un problema,Típico
+Punta Arenas,2,Buen dormir,14,9.5,12.5,3,5.75,2.75,3,10,Es un problema,Típico
+Punta Arenas,3,Buen dormir,18,8,11,3,6,2,4,,No es un problema,Típico
+Punta Arenas,4,Mal dormir,9,4.5,11,6.5,6,4.25,1.75,30,Es un problema,SAD
+Punta Arenas,5,Mal dormir,21,7.5,16,8.5,5.5,1.25,4.25,23,No es un problema,Típico
+Punta Arenas,6,Mal dormir,9,4.5,12,7.5,7,3.25,3.75,15,No es un problema,Típico
+Punta Arenas,7,Buen dormir,20,6.5,8.5,2,4.25,3.25,1,,Es un problema,Típico
+Punta Arenas,8,Mal dormir,15,6,8.5,2.5,4.75,3.5,1.25,23,No es un problema,Típico
+Punta Arenas,9,Buen dormir,14,9,8,-1,4,2,2,2,No es un problema,Típico
+Punta Arenas,10,Mal dormir,5,6.5,14.5,8,8.25,3.25,5,21,No es un problema,Típico
+Punta Arenas,11,Mal dormir,10,6,6.5,0.5,6.75,3.5,3.25,5,No es un problema,Típico
+Punta Arenas,12,Mal dormir,10,7,10.5,3.5,7.75,3,4.75,14,Es un problema,Típico
+Punta Arenas,13,Mal dormir,11,6,11,5,7.5,3,4.5,16,No es un problema,Típico
+Punta Arenas,14,Mal dormir,11,7.5,11,3.5,7.5,2.75,4.75,,Es un problema,Típico
+Punta Arenas,15,Mal dormir,13,6.5,9.75,3.25,5.61666666666667,3.25,2.36666666666667,23,Es un problema,SAD
+Punta Arenas,16,Buen dormir,24,7,8,1,4,2.5,1.5,20,No es un problema,Típico
+Punta Arenas,17,Mal dormir,7,5.5,10,4.5,10,2.75,7.25,21,No es un problema,Típico
+Punta Arenas,18,Mal dormir,9,5.5,8,2.5,5.5,3.75,1.75,,Es un problema,Típico
+Punta Arenas,19,Buen dormir,16,6.5,9,2.5,5.5,2.75,2.75,11,No es un problema,Típico
+Punta Arenas,20,Mal dormir,14,6,12,6,5.5,3,2.5,26,Es un problema,SAD
+Punta Arenas,21,Mal dormir,10,7,8.5,1.5,7.25,3.5,3.75,,Es un problema,Típico
+Punta Arenas,22,Mal dormir,14,8.5,11.5,3,5.75,1.75,4,20,Es un problema,SAD
+Punta Arenas,23,Mal dormir,9,6.5,8,1.5,8,3.75,4.25,30,No es un problema,Típico
+Punta Arenas,24,Mal dormir,16,6,18.5,12.5,19.25,1.5,17.75,,Es un problema,Típico
+Punta Arenas,25,Mal dormir,13,7,11.5,4.5,6.75,3.5,3.25,,Es un problema,Típico
+Punta Arenas,26,Mal dormir,12,7,12,5,5,2.5,2.5,13,No es un problema,Típico
+Punta Arenas,27,Mal dormir,16,8,12.8333333333333,4.83333333333333,3.91666666666667,1,2.91666666666667,4,No es un problema,Típico
+Punta Arenas,28,Buen dormir,16,7,6.5,-0.5,7.75,3,4.75,11,No es un problema,Típico
+Punta Arenas,29,Mal dormir,23,5.5,5.5,0,2.25,2.25,0,20,No es un problema,Típico
+Punta Arenas,30,Mal dormir,13,6.5,9.5,3,7.75,3.25,4.5,20,Es un problema,SAD
+Punta Arenas,31,Mal dormir,13,6.5,15,8.5,5.5,2.75,2.75,12,No es un problema,Típico
+Punta Arenas,32,Mal dormir,14,5.5,10.5,5,4.25,3.25,1,10,No es un problema,Típico
+Punta Arenas,33,Mal dormir,16,6.5,8,1.5,7.5,2.75,4.75,9,Es un problema,Típico
+Punta Arenas,34,Mal dormir,7,6,6,0,3.5,3,0.5,17,Es un problema,Típico
+Punta Arenas,35,Mal dormir,16,5,9,4,7,3,4,10,No es un problema,Típico
+Punta Arenas,36,Mal dormir,18,6.75,10.5,3.75,5.25,2.86666666666667,2.38333333333333,25,Es un problema,SAD
+Punta Arenas,37,Mal dormir,13,8.5,11.5,3,6.25,1.75,4.5,4,No es un problema,Típico
+Punta Arenas,38,Buen dormir,11,8,10.5,2.5,6.75,2,4.75,13,No es un problema,Típico
+Punta Arenas,39,Mal dormir,14,5.75,9.25,3.5,4.36666666666667,2.86666666666667,1.5,17,Es un problema,Típico
+Punta Arenas,40,Buen dormir,17,9,9,0,2.5,2.5,0,22,No es un problema,Típico
+Punta Arenas,41,Mal dormir,7,7,12,5,8,3.5,4.5,7,Es un problema,Típico
+Punta Arenas,42,Mal dormir,15,5.41666666666667,8,2.58333333333333,6.5,3.2,3.3,25,No es un problema,Típico
+Punta Arenas,43,Buen dormir,21,6.5,9,2.5,3.5,2.75,0.75,5,No es un problema,Típico
+Punta Arenas,44,Mal dormir,11,6.5,6.5,0,5.75,2.75,3,29,Es un problema,SAD
+Punta Arenas,45,Mal dormir,17,7,10,3,1,2.5,-1.5,22,Es un problema,Típico
+Punta Arenas,46,Mal dormir,15,8,8.5,0.5,6.25,2,4.25,29,Es un problema,Típico
+Punta Arenas,47,Mal dormir,10,6.5,9.5,3,6.25,3.25,3,32,No es un problema,Típico
+Punta Arenas,48,Mal dormir,15,5.5,7.5,2,6.25,3.75,2.5,30,Es un problema,SAD
+Punta Arenas,49,Mal dormir,16,8,9,1,4.5,2,2.5,0,No es un problema,Típico
+Punta Arenas,50,Mal dormir,14,5.5,10,4.5,8,4.25,3.75,7,Es un problema,Típico
+Punta Arenas,51,Buen dormir,12,9,2,-7,0,1.5,-1.5,9,Es un problema,Típico
+Punta Arenas,52,Mal dormir,19,8.5,10,1.5,2.5,1.75,0.75,24,Es un problema,SAD
+Punta Arenas,53,Mal dormir,16,14,9,-5,7.5,5,2.5,31,Es un problema,SAD
+Punta Arenas,54,Buen dormir,18,8.5,10.5,2,5.25,2.25,3,2,No es un problema,Típico
+Punta Arenas,55,Mal dormir,11,7,10.5,3.5,5.25,3,2.25,8,Es un problema,Típico
+Punta Arenas,56,Mal dormir,16,7,10.5,3.5,6.25,3,3.25,16,Es un problema,Típico
+Punta Arenas,57,Buen dormir,13,6.5,10,3.5,6,3.75,2.25,10,No es un problema,Típico
+Punta Arenas,58,Mal dormir,14,6,12,6,9,3.5,5.5,14,No es un problema,Típico
+Punta Arenas,59,Mal dormir,13,7.5,9.5,2,6.75,2.75,4,34,Es un problema,Típico
+Punta Arenas,60,Mal dormir,11,6,7,1,6,3.5,2.5,6,No es un problema,Típico
+Punta Arenas,61,Mal dormir,21,8.5,11.5,3,3.25,1.75,1.5,17,Es un problema,Típico
+Punta Arenas,62,Mal dormir,16,4.83333333333333,8,3.16666666666667,7,4.08333333333333,2.91666666666667,14,Es un problema,Típico
+Punta Arenas,63,Buen dormir,17,7.5,11.5,4,4.75,2.75,2,7,No es un problema,Típico
+Punta Arenas,64,Mal dormir,18,6.5,9,2.5,5.5,3.25,2.25,7,Es un problema,Típico
+Punta Arenas,65,Mal dormir,14,8,10,2,4.5,3,1.5,13,No es un problema,Típico
+Punta Arenas,66,Mal dormir,17,8,8.5,0.5,6.25,3,3.25,20,No es un problema,Típico
+Punta Arenas,67,Mal dormir,8,5.5,4.5,-1,8.75,4.75,4,4,No es un problema,Típico
+Punta Arenas,68,Mal dormir,6,6.5,8.5,2,7.75,3.25,4.5,15,No es un problema,Típico
+Punta Arenas,69,Mal dormir,5,3.5,12,8.5,9,2.75,6.25,25,Es un problema,SAD
+Punta Arenas,70,Mal dormir,17,7.5,11,3.5,4.5,3.25,1.25,5,No es un problema,Típico
+Punta Arenas,71,Mal dormir,8,4,10,6,8,4.5,3.5,6,No es un problema,Típico
+Punta Arenas,72,Mal dormir,9,6,10,4,8,4,4,33,No es un problema,Típico
+Punta Arenas,73,Mal dormir,8,6,,,,3.5,,19,Es un problema,SAD
+Punta Arenas,74,Mal dormir,11,7.5,10,2.5,5,3.25,1.75,34,Es un problema,SAD
+Punta Arenas,75,Mal dormir,18,8.5,9.5,1,6.25,2.25,4,21,Es un problema,SAD
+Punta Arenas,76,Buen dormir,14,4.5,7.5,3,7.25,3.75,3.5,12,No es un problema,Típico
+Punta Arenas,77,Mal dormir,19,6,8.5,2.5,6.25,0.5,5.75,8,Es un problema,Típico
+Punta Arenas,78,Buen dormir,19,8.5,10.5,2,3.75,1.75,2,15,Es un problema,Típico
+Punta Arenas,79,Mal dormir,14,10,10,0,1,1,0,10,Es un problema,Típico
+Punta Arenas,80,Mal dormir,15,6,10,4,6,3,3,,Es un problema,Típico
+Punta Arenas,81,Mal dormir,16,5.5,8,2.5,7,3.25,3.75,7,No es un problema,Típico
+Punta Arenas,82,Mal dormir,14,7,12,5,6,3.5,2.5,,Es un problema,Típico
+Punta Arenas,83,Mal dormir,14,6,10,4,5,3,2,32,Es un problema,SAD
+Punta Arenas,84,Buen dormir,13,8.5,7,-1.5,5.5,2.25,3.25,16,Es un problema,Típico
+Punta Arenas,85,Mal dormir,11,3.33333333333333,3.33333333333333,0,5.16666666666667,5.16666666666667,0,13,Es un problema,Típico
+Punta Arenas,86,Mal dormir,7,5.66666666666667,9.75,4.08333333333333,7.36666666666667,2.83333333333333,4.53333333333333,14,No es un problema,Típico
+Punta Arenas,87,Mal dormir,12,7,9,2,3.5,2.5,1,22,Es un problema,SAD
+Punta Arenas,88,Mal dormir,4,5.5,5,-0.5,5,4.75,0.25,9,Es un problema,Típico
+Punta Arenas,89,Buen dormir,12,9.5,11.5,2,3.75,1.75,2,7,No es un problema,Típico
+Punta Arenas,90,Mal dormir,15,6.5,6,-0.5,3.5,3.25,0.25,11,Es un problema,Típico
+Punta Arenas,91,Mal dormir,11,3.83333333333333,11,7.16666666666667,5.5,3.91666666666667,1.58333333333333,16,Es un problema,Típico
+Punta Arenas,92,Mal dormir,15,6,6.5,0.5,5.25,3,2.25,12,Es un problema,Típico
+Punta Arenas,93,Mal dormir,6,4,8,4,8,5,3,24,No es un problema,Típico
+Punta Arenas,94,Buen dormir,12,7.5,11,3.5,6.5,2.25,4.25,1,No es un problema,Típico
+Punta Arenas,95,Buen dormir,11,7.5,10.5,3,6.75,2.25,4.5,0,Es un problema,Típico
+Punta Arenas,96,Mal dormir,16,8,2,-6,5,2.5,2.5,17,Es un problema,Típico
+Punta Arenas,97,Mal dormir,9,7.16666666666667,8.5,1.33333333333333,5.75,2.58333333333333,3.16666666666667,12,No es un problema,Típico
+Punta Arenas,98,Buen dormir,14,6.5,7.5,1,7.25,3.25,4,,No es un problema,Típico
+Punta Arenas,99,Mal dormir,14,9.5,11,1.5,5.75,3.75,2,15,Es un problema,Típico
+Punta Arenas,100,Mal dormir,10,7,9.5,2.5,4.75,2.5,2.25,23,Es un problema,SAD
+Punta Arenas,101,Mal dormir,14,6,8.25,2.25,6.36666666666667,2.5,3.86666666666667,26,Es un problema,SAD
+Punta Arenas,102,Mal dormir,10,6.5,10,3.5,8,2.75,5.25,19,Es un problema,SAD
+Punta Arenas,103,Mal dormir,15,5,9.5,4.5,6.75,3,3.75,11,Es un problema,Típico
+Punta Arenas,104,Buen dormir,14,7.5,10,2.5,5,2.75,2.25,,Es un problema,Típico
+Punta Arenas,105,Buen dormir,14,7.5,8,0.5,3,3.25,-0.25,25,Es un problema,Típico
+Punta Arenas,106,Mal dormir,15,6.5,9,2.5,6,2.75,3.25,18,Es un problema,Típico
+Punta Arenas,107,Mal dormir,12,5.5,8.5,3,6.75,3.25,3.5,34,Es un problema,SAD
+Punta Arenas,108,Mal dormir,17,6,8.5,2.5,6.25,3,3.25,6,No es un problema,Típico
+Punta Arenas,109,Mal dormir,14,5.5,9,3.5,5.5,3.75,1.75,,Es un problema,Típico
+Punta Arenas,110,Mal dormir,11,7,9,2,5.5,3,2.5,3,No es un problema,Típico
+Punta Arenas,111,Mal dormir,16,5.5,10,4.5,5,2.25,2.75,13,Es un problema,Típico
+Punta Arenas,112,Mal dormir,17,5.5,9,3.5,10.5,3.75,6.75,6,Es un problema,Típico
+Punta Arenas,113,Mal dormir,15,7,12,5,6,2.5,3.5,12,No es un problema,Típico
+Punta Arenas,114,Mal dormir,14,7.5,9.5,2,2.75,2.75,0,25,No es un problema,Típico
+Punta Arenas,115,Mal dormir,14,7,9,2,6,2.5,3.5,18,Es un problema,Típico
+Punta Arenas,116,Mal dormir,16,5.5,22,16.5,14,3.75,10.25,10,Es un problema,Típico
+Punta Arenas,117,Mal dormir,14,6,6,0,4,4,0,22,Es un problema,SAD
+Punta Arenas,118,Mal dormir,11,12,10,-2,7,5,2,,No es un problema,Típico
+Punta Arenas,119,Mal dormir,21,9,10,1,4,2.5,1.5,12,No es un problema,Típico
+Punta Arenas,120,Buen dormir,16,7.5,9.5,2,4.25,2.25,2,15,No es un problema,Típico
+Punta Arenas,121,Mal dormir,11,5,7.5,2.5,6.75,5.5,1.25,23,Es un problema,SAD
+Punta Arenas,122,Buen dormir,14,7.5,8.5,1,3.75,2.75,1,20,Es un problema,SAD
+Punta Arenas,123,Buen dormir,13,8,10.5,2.5,8.25,2.5,5.75,0,No es un problema,Típico
+Punta Arenas,124,Mal dormir,17,6.5,8,1.5,5.5,2.75,2.75,20,Es un problema,Típico
+Punta Arenas,125,Buen dormir,19,10,10,0,5,1,4,7,No es un problema,Típico
+Punta Arenas,126,Mal dormir,18,10,7,-3,2.5,1,1.5,23,Es un problema,SAD
+Punta Arenas,127,Buen dormir,5,8.5,10,1.5,7,2.75,4.25,22,Es un problema,Típico
+Punta Arenas,128,Buen dormir,16,9,8.5,-0.5,3.75,2,1.75,22,Es un problema,SAD
+Punta Arenas,129,Mal dormir,9,6.5,11,4.5,7,3.25,3.75,8,No es un problema,Típico
+Santiago,130,Buen dormir,20,7,7.5,0.500000000000001,3.57142857142857,2.57142857142857,1,1,No es un problema,Típico
+Santiago,131,Mal dormir,19,8,9,1,3.64285714285714,2.64285714285714,1,18,Es un problema,Típico
+Santiago,132,Mal dormir,21,5.91666666666667,11,5.08333333333333,2.68452380952381,3.68452380952381,-1,20,Es un problema,SAD
+Santiago,133,Mal dormir,18,6.83333333333334,12,5.16666666666667,2.65476190476191,5.82142857142857,-3.16666666666667,24,No es un problema,Típico
+Santiago,134,Mal dormir,15,7,10,3,4.92857142857143,2.92857142857143,2,11,Es un problema,Típico
+Santiago,135,Buen dormir,13,7.75,8.5,0.75,4.48214285714286,3.81547619047619,0.666666666666669,24,Es un problema,Típico
+Santiago,136,Buen dormir,13,7,10,3,4.92857142857143,4.42857142857143,0.5,,,Típico
+Santiago,137,Mal dormir,13,6.25,10,3.75,3.66071428571429,3.91071428571428,-0.25,24,Es un problema,SAD
+Santiago,138,Buen dormir,20,8.83333333333333,8.75,-0.0833333333333339,3.6547619047619,2.4047619047619,1.25,13,No es un problema,Típico
+Santiago,139,Mal dormir,11,5.5,10.75,5.25,1.5,3.5,-2,37,Es un problema,SAD
+Santiago,140,Mal dormir,20,7.83333333333334,12,4.16666666666666,4.51190476190476,4.3452380952381,0.166666666666669,14,Es un problema,Típico
+Santiago,141,Buen dormir,15,7,9,2,4.78571428571429,3.78571428571429,1,13,No es un problema,Típico
+Santiago,142,Buen dormir,16,8,7,-1,4.85714285714286,2.85714285714286,2,,,Típico
+Santiago,143,Mal dormir,14,5.73333333333333,10,4.26666666666667,4.47619047619048,5.47619047619048,-1,18,No es un problema,Típico
+Santiago,144,Mal dormir,16,6.75,6,-0.75,3.26785714285714,1.26785714285714,2,14,No es un problema,Típico
+Santiago,145,Mal dormir,17,8,11,3,4.42857142857143,2.92857142857143,1.5,15,No es un problema,Típico
+Santiago,146,Buen dormir,20,9.5,13,3.5,3.75,3.75,0,20,Es un problema,Típico
+Santiago,147,Buen dormir,16,7.5,9,1.5,3.46428571428571,3.46428571428571,0,13,Es un problema,Típico
+Santiago,148,Mal dormir,10,7.5,7,-0.5,4.67857142857143,3.67857142857143,-1,7,No es un problema,Típico
+Santiago,149,Mal dormir,19,5.67,9.5,3.83,3.63214285714286,3.63214285714286,0,13,Es un problema,Típico
+Santiago,150,Mal dormir,19,5.5,8,2.5,2.10714285714286,2.60714285714286,-0.499999999999998,6,Es un problema,Típico
+Santiago,151,Mal dormir,12,5.75,9,3.25,5.33928571428571,4.33928571428572,1,8,Es un problema,Típico
+Santiago,152,Mal dormir,9,6,9,3,6.42857142857143,4.42857142857143,2,15,No es un problema,Típico
+Santiago,153,Mal dormir,22,8.5,9,0.500000000000002,2.32142857142857,1.82142857142857,0.499999999999998,21,Es un problema,SAD
+Santiago,154,Buen dormir,20,8.5,11,2.5,3.60714285714286,2.60714285714286,1,,,Típico
+Santiago,155,Buen dormir,15,7.66666666666667,11,3.33333333333334,6.30952380952381,3.97619047619048,2.33333333333333,20,Es un problema,Típico
+Santiago,156,Buen dormir,17,7,10.5,3.5,4.5,4,0.5,10,No es un problema,Típico
+Santiago,157,Mal dormir,13,5,9.5,4.5,6.64285714285714,5.64285714285714,1,16,Es un problema,Típico
+Santiago,158,Buen dormir,15,8.5,10,1.5,3.96428571428571,2.96428571428572,1,24,Es un problema,SAD
+Santiago,159,Mal dormir,9,4.75,8,3.25,6.83928571428572,5.33928571428572,1.5,28,Es un problema,SAD
+Santiago,160,,,7.5,7.5,0,3.75,3.25,0.500000000000001,25,Es un problema,Típico
+Santiago,161,,,6.33333333333333,7.5,1.16666666666667,3.5,4,-0.5,13,No es un problema,Típico
+Santiago,162,Buen dormir,17,7.33333333333334,9,1.66666666666667,4.90476190476191,3.4047619047619,1.5,16,Es un problema,Típico
+Santiago,163,Buen dormir,17,8.33333333333333,10,1.66666666666667,4.40476190476191,2.4047619047619,2,12,,Típico
+Santiago,164,Buen dormir,12,8.33333333333333,13,4.66666666666667,4.83333333333333,3.83333333333333,1,26,Es un problema,Típico
+Santiago,165,Buen dormir,17,11.75,11.25,-0.5,5.80357142857143,4.30357142857143,1.5,11,,Típico
+Santiago,166,Mal dormir,11,8.25,8,-0.25,4.08928571428571,3.08928571428572,1,34,Es un problema,SAD
+Santiago,167,Buen dormir,14,,,,,,,21,Es un problema,SAD
+Santiago,168,Mal dormir,12,7.75,9,1.25,4.05357142857143,3.55357142857143,-0.5,10,No es un problema,Típico
+Santiago,169,Mal dormir,14,7.83333333333333,9.58333333333333,1.75,6.08333333333333,3.16666666666667,2.91666666666667,27,Es un problema,SAD
+Santiago,170,Buen dormir,20,6.5,9.5,3,4.67857142857143,3.67857142857143,1,13,No es un problema,Típico
+Santiago,171,Buen dormir,16,7,9,2,3.78571428571429,3.78571428571429,0,14,No es un problema,Típico
+Santiago,172,Mal dormir,14,5.75,10,4.25,3.48214285714286,4.48214285714286,-1,,,Típico
+Santiago,173,Mal dormir,12,7,7,0,5.5,2.5,3,,,Típico
+Santiago,174,Buen dormir,16,7,10.1666666666667,3.16666666666667,5.78571428571429,3.95238095238095,1.83333333333333,,,Típico
+Santiago,175,Mal dormir,19,6.66666666666667,11,4.33333333333333,2.95238095238095,3.61904761904762,-0.666666666666667,3,Es un problema,Típico
+Santiago,176,Buen dormir,17,7,7,0,3.5,3.5,0,,,Típico
+Santiago,177,Mal dormir,11,,,,,,,13,Es un problema,Típico
+Santiago,178,,,6,8,2,4.28571428571429,4.28571428571429,0,10,No es un problema,Típico
+Santiago,179,,,3,4,1,4.64285714285714,4.64285714285714,0,18,No es un problema,Típico
+Santiago,180,Buen dormir,16,7.5,8,0.5,4.82142857142857,3.82142857142857,1,4,No es un problema,Típico
+Santiago,181,,,3.33333333333333,10,6.66666666666667,5.61904761904762,6.11904761904762,-0.5,,,Típico
+Santiago,182,Mal dormir,18,11,11,0,6,3.5,-2.5,1,No es un problema,Típico
+Santiago,183,,,,,,,,,,,Típico
+Santiago,184,Mal dormir,10,4.5,0.5,-4,5.42857142857143,2.92857142857143,-0.104166666666667,33,Es un problema,SAD
+Santiago,185,,,7.5,12,4.5,3.89285714285714,3.89285714285714,0,10,Es un problema,Típico
+Santiago,186,Mal dormir,11,7,9.5,2.5,4.85714285714286,3.60714285714286,-1.25,27,Es un problema,Típico
+Santiago,187,Buen dormir,13,8,9,1,5.14285714285714,4.14285714285714,1,,,Típico
+Santiago,188,Mal dormir,13,7,9,2,6.78571428571429,3.78571428571429,3,13,No es un problema,Típico
+Santiago,189,Buen dormir,14,8.41666666666667,9.16666666666667,0.75,4.14880952380952,2.64880952380952,1.5,12,No es un problema,Típico
+Santiago,190,Mal dormir,14,6,10,4,4.07142857142857,3.57142857142857,-0.5,27,Es un problema,Típico
+Santiago,191,Mal dormir,12,7.5,8,0.5,4.32142857142857,3.32142857142857,-1,25,Es un problema,SAD
+Santiago,192,,,,,,,,,,,Típico
+Santiago,193,Mal dormir,17,6.5,13,6.5,2.67857142857143,4.42857142857143,1.75,27,Es un problema,SAD
+Santiago,194,Mal dormir,14,2,10,8,3.14285714285714,3.14285714285714,0,29,Es un problema,SAD
+Santiago,195,Mal dormir,21,8,9,1,4.14285714285714,3.14285714285714,-1,14,No es un problema,Típico
+Santiago,196,Buen dormir,13,5,7,2,3.78571428571429,2.78571428571429,-1,29,No es un problema,Típico
+Santiago,197,Mal dormir,17,6,4.83,-1.17,2.83285714285714,2.33285714285714,-0.5,25,Es un problema,Típico
+Santiago,198,,,7,7,0,4,3.25,-0.75,16,Es un problema,Típico
+Santiago,199,Mal dormir,14,6.67,13.5,6.83,3.81071428571429,4.31071428571429,0.5,9,Es un problema,Típico
+Santiago,200,Mal dormir,10,7,8,1,5.14285714285714,3.89285714285714,-0.0520833333333333,29,Es un problema,SAD
+Santiago,201,Buen dormir,17,8.42,10.5,2.08,5.00714285714286,3.88214285714286,-1.125,22,No es un problema,Típico
+Santiago,202,Mal dormir,11,7.5,7,-0.5,4.67857142857143,3.67857142857143,-1,,,Típico
+Santiago,203,Mal dormir,14,7,13,6,4.35714285714286,3.85714285714286,-0.5,22,Es un problema,Típico
+Santiago,204,Mal dormir,14,6,8,2,4.78571428571429,3.78571428571429,-1,12,No es un problema,Típico
+Santiago,205,Mal dormir,10,7,9,2,5.78571428571429,4.03571428571429,-1.75,0,No es un problema,Típico
+Santiago,206,Mal dormir,16,7,13,6,4.35714285714286,4.35714285714286,0,26,No es un problema,Típico
+Santiago,207,Buen dormir,9,6.25,9.5,3.25,5.33928571428571,4.08928571428571,-1.25,1,No es un problema,Típico
+Santiago,208,,,7.67,11,3.33,4.06071428571429,3.81071428571429,-0.25,7,Es un problema,Típico
+Santiago,209,Mal dormir,13,7.5,10,2.5,4.60714285714286,3.60714285714286,-1,7,No es un problema,Típico
+Santiago,210,Mal dormir,13,7.17,10.5,3.33,4.81071428571429,3.97571428571428,-0.835000000000001,17,Es un problema,Típico
+Santiago,211,Mal dormir,18,8,8,0,4.5,4,-0.0208333333333333,,,Típico
+Santiago,212,,,8,9,1,5.14285714285714,3.14285714285714,-2,,,Típico
+Santiago,213,Buen dormir,18,8.5,13,4.5,4.39285714285714,4.14285714285714,-0.0104166666666667,17,No es un problema,Típico
+Santiago,214,Buen dormir,14,0.83,0.67,-0.16,4.14214285714286,4.14214285714286,0,19,Es un problema,Típico
+Santiago,215,Buen dormir,13,8.17,10,1.83,5.09642857142857,3.84642857142857,-1.25,3,No es un problema,Típico
+Santiago,216,Buen dormir,12,8,7,-1,3.85714285714286,3.60714285714286,-0.25,13,Es un problema,Típico
+Santiago,217,Mal dormir,15,7,7.5,0.5,3.82142857142857,3.07142857142857,-0.75,17,Es un problema,Típico
+Santiago,218,Mal dormir,12,4.92,9,4.08,4.29285714285714,2.91785714285714,-1.375,17,Es un problema,Típico
+Santiago,219,Mal dormir,12,7.17,9,1.83,4.34642857142857,3.34642857142857,-1,18,No es un problema,Típico
+Santiago,220,Mal dormir,11,7.44,10.74,3.3,4.65642857142857,4.05642857142857,-0.6,24,Es un problema,SAD

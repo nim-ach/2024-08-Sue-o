@@ -1,14 +1,51 @@
 
+## Importar librerias
+library(data.table)
 
 ## Funciones
-sleep_time <- function(dormir, despertar) {
-  x_a <- x <- lubridate::hm(dormir, quiet = TRUE)
-  y <- lubridate::hm(despertar, quiet = TRUE)
-  ind <- x > (12 * 60 * 60) & !is.na(x)
-  x_a[ind] <- x[ind] - lubridate::hm("24:00")
-  h_sueno <- round(as.numeric(y - x_a)/3600, 1)
-  h_sueno[h_sueno < 0] <- NA
-  return(h_sueno)
+calcular_indices_mctq <- function(SOw, SEw, SOf, SEf) {
+
+  # Convertir las horas a formato de 24 horas
+  SOw <- as.POSIXct(SOw, format="%H:%M")
+  SEw <- as.POSIXct(SEw, format="%H:%M")
+  SOf <- as.POSIXct(SOf, format="%H:%M")
+  SEf <- as.POSIXct(SEf, format="%H:%M")
+
+  # Ajustar las horas si el tiempo de finalización es menor que el tiempo de inicio
+  SEw[SOw > SEw & complete.cases(SOw, SEw)] <- SEw[SOw > SEw & complete.cases(SOw, SEw)] + 86400
+  SEf[SOf > SEf & complete.cases(SOf, SEf)] <- SEf[SOf > SEf & complete.cases(SOf, SEf)] + 86400
+
+  # Calcular la duración del sueño en días laborales y libres
+  SDw <- as.numeric(difftime(SEw, SOw, units="hours"))
+  SDf <- as.numeric(difftime(SEf, SOf, units="hours"))
+
+  # Calcular el punto medio del sueño en días laborales (MSW)
+  MSW <- SOw + (SEw - SOw) / 2
+  MSWn <- as.numeric(format(MSW, format = "%H")) + as.numeric(format(MSW, format = "%M")) / 60
+  MSW <- format(MSW, "%H:%M")
+
+  # Calcular el punto medio del sueño en días libres (MSF)
+  MSF <- SOf + (SEf - SOf) / 2
+  MSFn <- as.numeric(format(MSF, format = "%H")) + as.numeric(format(MSF, format = "%M")) / 60
+  MSF <- format(MSF, "%H:%M")
+
+  # Calcular el punto medio del sueño en días libres corregido (MSFsc)
+  MSFsc <- ifelse(SDf <= SDw, MSF, format(as.POSIXct(MSF, format="%H:%M") - (SDf - SDw) / 2, "%H:%M"))
+
+  # Calcular el jetlag social
+  jetlag_social <- as.numeric(difftime(as.POSIXct(MSF, format="%H:%M"), as.POSIXct(MSW, format="%H:%M"), units="hours"))
+
+  # Crear un data frame con los resultados
+  resultados <- data.frame(
+    sdwd = SDw,
+    sdfd = SDf,
+    sddiff = SDf - SDw,
+    msfc = MSFn,
+    mswc = MSWn,
+    sjlc = jetlag_social
+  )
+
+  return(resultados)
 }
 
 spaq_to_num <- function(x) {
@@ -22,9 +59,12 @@ data <- read.csv("data-raw/raw_puq.csv")
 data <- data[, grep("___|_q|_complete$", names(data), ignore.case = TRUE, value = TRUE, invert = TRUE)]
 
 ## Crear variables
-data$sueno_semana_academica <- sleep_time(data$hora_de_dormir_1, data$hora_de_despertar_1)
-data$sueno_semana_finde <- sleep_time(data$hora_de_dormir_2, data$hora_de_despertar_2)
-data$sueno_diff <- data$sueno_semana_finde - data$sueno_semana_academica
+mctq_data_puq <- with(data, {
+  calcular_indices_mctq(SOw = hora_de_dormir_1,
+                        SEw = hora_de_despertar_1,
+                        SOf = hora_de_dormir_2,
+                        SEf = hora_de_despertar_2)
+})
 
 data$gss <- with(data, {
   spaq_to_num(horas_de_sueno) +
@@ -44,9 +84,12 @@ data$gss <- with(data, {
 data_puq <- data.frame(id = data$record_id,
                        Pitcat = as.numeric(data$clasificacion_global > 5) + 1,
                        HO = data$puntaje_total_matutinindadvespertinidad,
-                       sdwd = data$sueno_semana_academica,
-                       sdfd = data$sueno_semana_finde,
-                       sddiff = data$sueno_diff,
+                       sdwd = mctq_data_puq$sdwd,
+                       sdfd = mctq_data_puq$sdfd,
+                       sddiff = mctq_data_puq$sddiff,
+                       msfc = mctq_data_puq$msfc,
+                       mswc = mctq_data_puq$mswc,
+                       sjlc = mctq_data_puq$sjlc,
                        GSS = data$gss,
                        spaqprob = data$es_un_problema,
                        sadcrit = as.numeric(data$gss > 18 & spaq_to_num(data$gravedad_problema) > 0))
@@ -64,7 +107,7 @@ names(data_scl) <- data_scl[23,] |> as.character()
 data_scl <- data_scl[-c(1:23), ]
 
 ## Seleccionar variables
-data_scl <- data_scl[, c(2:7,11:13)]
+data_scl <- data_scl[, c(2:13)]
 
 ## Transformar variables a numérico
 data_scl |> str()
@@ -74,6 +117,9 @@ data_scl <- within(data_scl, {
   sdwd <- as.numeric(sdwd)
   sdfd <- as.numeric(sdfd)
   sddiff <- as.numeric(sddiff)
+  msfc <- as.numeric(msfc)
+  mswc <- as.numeric(mswc)
+  sjlc <- as.numeric(sjlc)
   GSS <- as.numeric(GSS)
   spaqprob <- as.numeric(spaqprob)
   sadcrit <- as.numeric(sadcrit)
@@ -87,7 +133,8 @@ data_full <- rbind(
 
 names(data_full) <- c("comuna", "id", "psqi_cat", "ho_score",
                       "munich_horas_semana", "munich_horas_finde",
-                      "munich_horas_diff", "spaq_gss",
+                      "munich_horas_diff", "munich_msfc",
+                      "munich_mswc", "munich_sjlc", "spaq_gss",
                       "spaq_problema_cat", "spaq_sad_cat")
 
 data_full$psqi_cat <- factor(data_full$psqi_cat, levels = 1:2, labels = c("Buen dormir", "Mal dormir"))
@@ -96,7 +143,11 @@ data_full$spaq_sad_cat <- factor(data.table::fifelse(data_full$spaq_sad_cat == 1
 
 data_full$id <- seq_len(nrow(data_full))
 
-sleep <- data_full
+sleep <- as.data.table(data_full)
 rm(data_full)
 
 save(sleep, file = "data/sleep.RData")
+
+data.table::fwrite(x = sleep, file = "data-raw/data_full.csv")
+data.table::fwrite(x = sleep[comuna == "Punta Arenas", -c("comuna")], file = "data-raw/data_puq.csv")
+data.table::fwrite(x = sleep[comuna == "Santiago", -c("comuna")], file = "data-raw/data_scl.csv")
